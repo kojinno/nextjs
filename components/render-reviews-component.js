@@ -24,9 +24,9 @@ const getReviewsData = async (path) => {
       setReviewsData('no-data')
       alert('Error Loading Reviews Data, Please try again in a few minutes')
     }
-    setTimeout(function() {
+   
       setIsLoading(false)
-    }, 1100);
+ 
     
  }
 
@@ -36,12 +36,12 @@ const getReviewsData = async (path) => {
 
   return (
                <div className=''>
-                   {(isLoading || !reviewsData || reviewsData == 'no-data') &&
+                   {(isLoading || !reviewsData || reviewsData === 'no-data') &&
                     <div>
                         <p> Loading Information </p>
                     </div>
                    }
-                   { !isLoading && reviewsData && reviewsData != 'no-data' &&
+                   { !isLoading && reviewsData && reviewsData !== 'no-data' &&
                     <div className="">
 
                         {(reviewsData).map(item => (

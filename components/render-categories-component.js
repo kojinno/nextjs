@@ -23,9 +23,9 @@ const getCategoriesData = async (path) => {
       setCategoriesData('no-data')
       alert('Error Loading Categories Data, Please try again in a few minutes')
     }
-    setTimeout(function() {
+
       setIsLoading(false)
-    }, 1100);
+ 
     
  }
 
@@ -35,12 +35,12 @@ const getCategoriesData = async (path) => {
 
   return (
                <div className=''>
-                   {(isLoading || !categoriesData || categoriesData == 'no-data') &&
+                   {(isLoading || !categoriesData || categoriesData === 'no-data') &&
                     <div>
                         <p> Loading Information </p>
                     </div>
                    }
-                   { !isLoading && categoriesData && categoriesData != 'no-data' &&
+                   { !isLoading && categoriesData && categoriesData !== 'no-data' &&
                     <div>
                         {(categoriesData).map(item => (
                             <Tag>{item.attributes.slug}</Tag>
