@@ -35,3 +35,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # Project Log
 - Installed support for less and added less to the project
 - Tested custom style in a .less file
+- Implemented Basic Requests
+- Implemented Basic Page Functions
+- Turn Card into Component
+- Crated Test File
+- I have jest installed globally for testing, so if you can run tests with jest app.test.js  (if you have it installed)
+- I'll improve on that in the future, for now I have other prioprities due to time restrictions
+- Add more information in details page
+- Add icons logic and go to top
+- Override ant styles

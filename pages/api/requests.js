@@ -82,4 +82,30 @@ export const getAnimeDetails = async (id) => {
 }
 
 
+export const getGenericRequest = async (path) => {
+  let responseObj = {}
+  try {
+      await axios.get(`${path}`, 
+      { } )
+      .then(res => {
+          if(res != Error){
+            responseObj.output = res;
+            responseObj.request = 'ok';
+          }else{
+            responseObj.output = res;
+            responseObj.request = 'error';
+          }
+      }).catch((error) => {
+        responseObj.output = error;
+        responseObj.request = 'error';
+      });
+  
+  } catch (error) {
+      console.log(`catch ${error}`);
+  }
+
+  return responseObj;
+}
+
+
 

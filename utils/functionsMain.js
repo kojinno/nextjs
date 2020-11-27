@@ -20,3 +20,22 @@ export function getTextShort(string) {
    
     return parseHTML(shortString + postString);
 }
+
+export function replaceSpacesForRequest(text) {
+    return text.replace(/ /g, '%20');
+}
+
+export function capitalize(text){
+    return text.slice(0,1).toUpperCase() + text.slice(1,text.length)
+}
+
+export function returnHtml(text){
+    return parseHTML(text);
+}
+
+
+
+
+
+
+

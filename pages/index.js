@@ -1,7 +1,8 @@
 
 import 'antd/dist/antd.css';
 import "../assets/css/style.less"
-import {Card, Row} from 'antd'
+import {Row,BackTop} from 'antd'
+import {renderIcon} from '../utils/icons'
 //Design
 
 import {useEffect,useState} from 'react';
@@ -27,7 +28,7 @@ export default function Home() {
   const [trendingList,setTrendingList] = useState(false);
   const [isLoading,setIsLoading] = useState(true);
 
-  const { current } = '/';
+
 
   const goToDetailPage = (page) => {
     router.push(`anime?identifier=${page}`)
@@ -78,6 +79,9 @@ export default function Home() {
       }
     
 
+    <BackTop>
+      {renderIcon('top')}
+    </BackTop>
     </section>
 
     

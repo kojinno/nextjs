@@ -7,6 +7,8 @@
 
 @color-blue-main:#358bac;
 
+@color-grey-2: #4a4343;
+
 @box-shadow-1: 1px 2px 2px rgba(72, 70, 70, 0.3);
 @box-shadow-2: 2px 2px 2px rgba(10,10,10,0.3);
 @border-1: 1px solid #ece7e7;
@@ -18,17 +20,26 @@
 @width-5:1800px;
 
 
+@radius-0: 3px;
 @radius-1: 6px;
 @radius-2: 12px;
 
 @spacing-1:7px;
 @spacing-2:14px;
 @spacing-3:21px;
+@spacing-4:28px;
+@spacing-5:36px;
 
+@font-0:10px;
+@font-1:14px;
 @font-2:18px;
 @font-3: 21px;
 @font-4: 28px;
 @font-5: 36px;
+
+.font-1{
+    font-size: @font-1;
+}
 
 p,h1,h2,h3,h4,h5,h6,a{
     margin: 0;
@@ -47,6 +58,15 @@ img{
 
 .clr-trending{
     color: @color-main;
+}
+.clr-text-grey{
+    color: @color-grey-2;
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
 }
 
 .flex-column{
@@ -69,10 +89,31 @@ img{
 .justify-center{
     justify-content: center
 }
+.justify-end{
+    justify-content: flex-end;
+}
+.items-center{
+    align-items: center;
+}
 
 .fat{
     font-weight: 600;
 }
+
+.margin-top-1{
+    margin-top: @spacing-1;
+}
+.margin-top-3{
+    margin-top: @spacing-3;
+}
+.margin-top-4{
+    margin-top: @spacing-4;
+}
+.margin-top-5{
+    margin-top: @spacing-5;
+}
+
+
 
 
 // Align and Position ............................................................................................
@@ -99,11 +140,26 @@ img{
     width: @width-1;
     .margin-center;
     .text-center;
+    .justify-center;
+    .items-center;
+    min-height: 69vh;
 }
 
 
 
 // al-Containers ............................................................
+.al-review-block{
+    border: @border-1;
+    border-radius: @radius-1;
+    padding: @spacing-2 @spacing-3;    
+    .margin-top-5;
+    .al-review-block-source{
+        .text-right;
+        span{
+            .fat;
+        }
+    }
+}
 
 .al-current-page{
     color: @color-main;
@@ -138,20 +194,32 @@ img{
  color: @color-main;
 }
 
+
 .al-link-1{
     a{
-        background-color: @color-sub;
-        color: white;
-        padding:  @spacing-1;
-        border-radius: @radius-1;
+        color: @color-sub;
+        padding: @radius-1 @spacing-1;
+        border-radius: @radius-0;
         box-shadow: 1@box-shadow-1;
+        border:1px solid @color-sub;
+        margin-left: @spacing-1;
+        margin-right: @spacing-1;
     }
     .fat;
 }
 
+.al-label-highlight{
+    display: inline-block;
+    .fat;
+    color: @color-grey-2;
+    font-size: @font-2;
+    margin-right: @spacing-1;
+    margin-top: @spacing-2;
+}
+
 // Tags and links....
 
-.al-page-info,.al-page-datil-info{
+.al-page-info,.al-page-detail-info{
     padding: @spacing-3;
     h1{
         font-size: @font-5;
@@ -165,12 +233,16 @@ img{
 
 
 
-.al-page-datil-info{
+.al-page-detail-info{
     .text-center;
     img{
         width: 100%;
         margin-bottom: @spacing-3;
     }
+}
+.al-page-detail-info-extra{
+    .text-left;
+    // background-color: red;
 }
 
 // Info
@@ -215,4 +287,82 @@ img{
     }
 }
 
+.al-page-filters{
+    label{
+        display: block;
+    }
+}
+
 // al-componenets ............................................................
+
+
+#page-about{
+    p{
+        margin-top: @spacing-2;
+    }
+}
+
+
+
+// page specific ............................................................
+
+
+.ant-btn-clear{
+    background-color: @color-main;
+    border-color: @color-main;
+    color: white;
+    &:hover,&:focus{
+        background-color: @color-main;
+        border-color: @color-main;
+        color: white;
+        opacity: 0.8;
+    }
+}
+
+.ant-table-thead, .ant-table-tbody{
+    tr{
+        td,th{
+            &:last-child{
+                text-align: right;
+            }
+        }
+        
+    }
+}
+.ant-pagination-simple{
+    padding: @spacing-3;
+    .text-right;
+    background-color: rgba(249, 249, 249, 0.85);
+}
+.ant-table-tbody > tr > td {
+    padding: @spacing-1 @spacing-3;
+}
+.ant-menu{
+    @media only screen and (max-width: @width-5) {
+       .justify-center;
+    }
+}
+.ant-menu-item{
+    font-size: @font-2;
+}
+
+.ant-collapse{
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+}
+
+.ant-back-top{
+    display: block;
+    width: @spacing-4;
+    height: @spacing-4;
+    svg{
+        width: 100%;
+        height: 100%;
+        color: @color-grey-2;
+        fill:@color-grey-2;
+    }
+    
+}
+
+//Ant modifiers ............................................................
