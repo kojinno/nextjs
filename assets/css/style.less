@@ -1,3 +1,217 @@
-.index {
-    color: red;
+@size-1: 33px;
+
+@color-main:#ea1717;
+@color-sub:#515460;
+@color-white: #efeff0;
+@color-grey-0:#eaeaea;
+
+@color-blue-main:#358bac;
+
+@box-shadow-1: 1px 2px 2px rgba(72, 70, 70, 0.3);
+@box-shadow-2: 2px 2px 2px rgba(10,10,10,0.3);
+@border-1: 1px solid #ece7e7;
+
+
+@width-0: 330px;
+@width-1:700px;
+@width-4:1600px;
+@width-5:1800px;
+
+
+@radius-1: 6px;
+@radius-2: 12px;
+
+@spacing-1:7px;
+@spacing-2:14px;
+@spacing-3:21px;
+
+@font-3: 21px;
+@font-5: 36px;
+
+p,h1,h2,h3,h4,h5,h6,a{
+    margin: 0;
 }
+body{
+    background-color: white;
+}
+img{
+    max-width: 100%;
+}
+.ant-layout{
+    background: white;
+}
+
+// HTML basics...........................................
+
+.clr-trending{
+    color: @color-main;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.margin-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.justify-center{
+    justify-content: center
+}
+
+.fat{
+    font-weight: 600;
+}
+
+
+// Align and Position
+
+.al-app-logo{
+    .margin-center;
+    width: @width-0;
+    margin-top: @spacing-3;
+}
+
+// header{
+//     .margin-center;
+//     .text-center;
+//     width: @width-1;
+//     background-color: @color-blue-main;
+//     padding: @radius-2 @radius-1;
+//     border-radius: 0 0 @spacing-2 @spacing-2;
+//     color: white;
+//     box-shadow: @box-shadow-1;
+//     nav{
+//         a{
+//             display: inline-block;
+//             margin: 0 @spacing-1;
+//             color: white;
+//         }
+        
+//     }
+// }
+
+.al-current-page{
+    color: @color-main;
+    .fat;
+    &:hover{
+        color: @color-main;
+    }
+}
+
+.container-basic{
+    display: flex;
+    max-width: 94%;
+}
+
+.al-container-1, .al-container-2{
+    .container-basic;
+}
+.al-container-1{
+    min-height: calc(100vh - @size-1);   
+    width: @width-4; 
+    .margin-center;
+    padding-bottom: @spacing-3;
+}
+.al-container-2{
+    width: @width-4;
+    .margin-center;
+}
+.al-container-3{
+    width: @width-1;
+    .margin-center;
+    .text-center;
+}
+
+
+
+
+
+
+// Components............................................................
+
+.al-title{
+    .fat;
+    font-size: @font-5;
+}
+
+.al-loading, .al-no-data{
+    width: 100%;
+    text-align: center;
+    margin-top: 18vh;
+    font-size: 20px;
+    color: #cecece;
+}
+
+.al-tag-details{
+ margin-left: @spacing-1;
+ color: @color-main;
+}
+
+// Tags....
+
+.al-page-info,.al-page-datil-info{
+    h1{
+        font-size: @font-5;
+        .fat;
+    }
+}
+.al-page-datil-info{
+    .text-center;
+    img{
+        width: 100%;
+        margin-bottom: @spacing-3;
+    }
+}
+
+// Info
+
+.al-card-columns{
+    display: inline-block;
+    width: 33%;
+    box-sizing: border-box;
+    @media only screen and (max-width: @width-5) {
+        width:49%;
+    }
+    @media only screen and (max-width: @width-1) {
+        width:98%;
+    }
+}
+.al-cards-custom{
+    margin-bottom: @spacing-2;
+    .ant-card{
+        min-height: 100%;
+        border-radius: @radius-1;
+        margin: @spacing-1;
+        box-shadow: @box-shadow-2;
+        border: @border-1;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+            transform: rotate(1deg);
+        }
+        .ant-card-head-title{
+            font-size: @font-3;
+            padding: @spacing-2 0;
+        }
+        .ant-card-body{
+            padding: 0 0 @spacing-3 0;
+            .al-card-main-info,.al-card-main-description{
+                padding: 0 @spacing-3;
+            }
+            .al-card-main-info{
+                margin: @spacing-1 0;
+            }
+        }
+    }
+}
+
