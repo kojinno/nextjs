@@ -174,8 +174,8 @@ export default function Home() {
                 </Select>
               </Col>
               <div className="items-center flex">
-                  <Button  type="primary" onClick={() => callApiRequest()}>Search</Button>
                   <Button  type="clear" onClick={() => clearAndCallApiRequest()}>Clear</Button>
+                  <Button  type="primary" onClick={() => callApiRequest()}>Search</Button>
             </div>
 
             </Row>
