@@ -151,7 +151,7 @@ export default function Home() {
   return (
     <section className={'al-container-1 flex-column'}>
         <div className="al-page-info">
-          <h1>Welcome to <span className="clr-trending">Search</span></h1>
+          <h1>Anime <span className="clr-trending">Search</span></h1>
           <p> You can use the Search field to look Animes by name or with a similar name, if you want you can also set the filter by content type (G,PG,R,R18) </p>
       </div> 
 

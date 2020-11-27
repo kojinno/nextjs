@@ -79,7 +79,7 @@ export default function Anime() {
     </PageHeader> 
 
   
-      {( (selectedAnimeData  && selectedAnimeData != 'no-data') && !isLoading  ) && 
+      {( (selectedAnimeData  && selectedAnimeData !== 'no-data') && !isLoading  ) && 
           <div className="al-page-detail-info">
 
             {selectedAnimeData.attributes && 
@@ -171,7 +171,7 @@ export default function Anime() {
           Loading
         </div>
       }
-       {(( !selectedAnimeData || selectedAnimeData == 'no-data' || !selectedAnimeData.attributes) && !isLoading) && 
+       {(( !selectedAnimeData || selectedAnimeData === 'no-data' || !selectedAnimeData.attributes) && !isLoading) && 
         <div className="al-loading">
           {console.log(selectedAnimeData)}
           No Data

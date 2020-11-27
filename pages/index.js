@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <section className={'al-container-1 flex-column'}>
       <div className="al-page-info">
-          <h1>Welcome to <span className="clr-trending">Trending</span></h1>
+          <h1>Anime <span className="clr-trending">Recommendations</span></h1>
           <p>
             Looking for the best of the best? Well, that's subjetive, but below you can find some of the Top Anime to Keep you up to date with what everyone is talking about.
             
