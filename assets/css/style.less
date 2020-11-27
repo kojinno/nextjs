@@ -1,7 +1,7 @@
 @size-1: 33px;
 
 @color-main:#ea1717;
-@color-sub:#515460;
+@color-sub:#319cd0;
 @color-white: #efeff0;
 @color-grey-0:#eaeaea;
 
@@ -25,7 +25,9 @@
 @spacing-2:14px;
 @spacing-3:21px;
 
+@font-2:18px;
 @font-3: 21px;
+@font-4: 28px;
 @font-5: 36px;
 
 p,h1,h2,h3,h4,h5,h6,a{
@@ -73,47 +75,14 @@ img{
 }
 
 
-// Align and Position
+// Align and Position ............................................................................................
 
-.al-app-logo{
-    .margin-center;
-    width: @width-0;
-    margin-top: @spacing-3;
-}
-
-// header{
-//     .margin-center;
-//     .text-center;
-//     width: @width-1;
-//     background-color: @color-blue-main;
-//     padding: @radius-2 @radius-1;
-//     border-radius: 0 0 @spacing-2 @spacing-2;
-//     color: white;
-//     box-shadow: @box-shadow-1;
-//     nav{
-//         a{
-//             display: inline-block;
-//             margin: 0 @spacing-1;
-//             color: white;
-//         }
-        
-//     }
-// }
-
-.al-current-page{
-    color: @color-main;
-    .fat;
-    &:hover{
-        color: @color-main;
-    }
-}
 
 .container-basic{
     display: flex;
     max-width: 94%;
 }
-
-.al-container-1, .al-container-2{
+.al-container-1, .al-container-2,.al-container-3{
     .container-basic;
 }
 .al-container-1{
@@ -134,10 +103,22 @@ img{
 
 
 
+// al-Containers ............................................................
+
+.al-current-page{
+    color: @color-main;
+    .fat;
+    &:hover{
+        color: @color-main;
+    }
+}
 
 
-
-// Components............................................................
+.al-app-logo{
+    .margin-center;
+    width: @width-0;
+    margin-top: @spacing-3;
+}
 
 .al-title{
     .fat;
@@ -157,14 +138,33 @@ img{
  color: @color-main;
 }
 
-// Tags....
+.al-link-1{
+    a{
+        background-color: @color-sub;
+        color: white;
+        padding:  @spacing-1;
+        border-radius: @radius-1;
+        box-shadow: 1@box-shadow-1;
+    }
+    .fat;
+}
+
+// Tags and links....
 
 .al-page-info,.al-page-datil-info{
+    padding: @spacing-3;
     h1{
         font-size: @font-5;
         .fat;
     }
+    p{
+        line-height: @font-4;
+    }
 }
+
+
+
+
 .al-page-datil-info{
     .text-center;
     img{
@@ -215,3 +215,4 @@ img{
     }
 }
 
+// al-componenets ............................................................
